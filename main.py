@@ -3,7 +3,6 @@
 
 import discord
 import random
-import json
 import os
 
 client = discord.Client()
@@ -57,5 +56,7 @@ async def on_message(message):
 		print("invading the middle east for WMD\'s")
 		await message.channel.send('Saddam Hussein has nuclear weapons')
 
+	elif 'affair' in message.content:
+		await message.channel.send('I did not have did not have sexual relations with that woman, ' + message.author.mention)
 
 client.run(os.environ['token'])
